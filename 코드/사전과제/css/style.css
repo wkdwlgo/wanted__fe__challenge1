@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+/* 웹폰트 설정 */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+/*
+font-family: 'Lato', sans-serif;
+Thin 100
+Light 300
+Regular 400
+Bold 700
+Black 900
+font-family: 'Oswald', sans-serif;
+Extra-light 200
+Light 300
+Regular 400
+Medium 500
+Semi-bold 600
+Bold 700
+*/
+
+:root {
+    --main-color: #FFFFFF;
+    --middle-main-color:#1D1F24;
+    --main-box-color:#FF565C;
+    --header-title-color2: #d2d2d3;
+    --main--background-color: #f9fafc;
+
+  }
+
+/* reset */
+html {
+  font-size: 62.5%;
+}
+body,
+input {
+  font-family: "Lato", sans-serif;
+}
+body {
+  margin: 0;
+  color: var(--dark-color);
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-weight: normal;
+  margin: 0;
+}
+dl,
+dd,
+p {
+  margin: 0;
+}
+button,
+input {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+    border-radius: 0;
+}
+button {
+  cursor: pointer;
+}
+em {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+img {
+  vertical-align: top;
+}
+fieldset {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 공통 */
+main{
+    background-color: var(--main--background-color);
+}
+header{
+    /* sticky : 처음엔 static 속성과 같이 동작하다가 스크롤시 지정 지점에서 요소를 fixed 처럼 고정 */
+ position: sticky;
+background-color: var(--main-color);
+top: 0;
+left: 0;
+z-index: 1000; /* 예시로 설정한 값, 필요에 따라 조절하세요 */
+align-items: center;
+border-bottom: 2px solid #ebebeb;
+}
+
+
+
+.sns__footer__box{
+    display: flex;
+}
+.footer{
+    background-color: var(--middle-main-color);
+    color: var(--header-title-color2);
+}
+.footer__nav__title__box{
+    display: flex;
+   
+}
+.footer__nav__title{
+    width: 3rem;
+    padding-right: 15rem;
+}
+.input__footer__box{
+    display: flex;
+}
+.input__footer{
+    border: none;
+    background-color: var(--main--background-color);
+}
+.button__footer{
+    background-color: var(--main-box-color);
+    color: var(--main--background-color);
+    margin: 0;
+}
+.main__first__box{
+    background-image: url('../img/1-1.jpeg');
+
+}
+.main__first__title__box{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   
+}
+.btn_red{
+    color: var(--main-color);
+    padding: 1rem;
+    background-color: var(--main-box-color);
+}
+.main__icon__box{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+   
+}
+.main__second__count__box{
+display: flex;
+}
+.main__box{
+    border-bottom: 2rem;
+ }
+ 
+
+/* 모바일 */
+@media only screen and (max-width: 767px) {
+    .header {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        padding-right: 1rem;
+        font-size: 1.5rem;
+        height: 1.5rem;
+        position: 0;
+  }
+  .footer{
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+  .footer__nav__title{
+    width: 3rem;
+    padding-right: 15rem;
+}
+.sns__footer__box> p ~ i{
+    padding: 0 1% 0 1%;
+}
+.main{
+    padding: 2rem 1.5rem 5rem 1.5rem;
+    height: 100vh;
+}
+.main__first__box{
+    color: var(--main-color);
+    height: 441px;
+    padding: 1rem;
+}
+
+.main__first__title{
+    font-size: 3rem;
+}
+
+.main__icon__box > p{   
+    font-size: 1.2rem;
+}
+
+
+.main__second__box{
+    height: 30rem;
+}
+
+
+
+}
+
+
+/* 데스크탑 */
+@media only screen and (min-width: 768px) {
+
+}
