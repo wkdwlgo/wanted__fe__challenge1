@@ -24,6 +24,7 @@ Bold 700
     --main-box-color:#FF565C;
     --header-title-color2: #d2d2d3;
     --main--background-color: #f9fafc;
+    --main--conunt--color:#d9dadb;
 
   }
 
@@ -38,6 +39,7 @@ input {
 body {
   margin: 0;
   color: var(--dark-color);
+  overflow-y: scroll;
 }
 ul,
 ol {
@@ -87,9 +89,13 @@ fieldset {
 
 
 /* 공통 */
-main{
+#main{
+    height: auto;
+    min-height: 100%;
     background-color: var(--main--background-color);
+    
 }
+
 header{
     /* sticky : 처음엔 static 속성과 같이 동작하다가 스크롤시 지정 지점에서 요소를 fixed 처럼 고정 */
  position: sticky;
@@ -109,6 +115,8 @@ border-bottom: 2px solid #ebebeb;
 .footer{
     background-color: var(--middle-main-color);
     color: var(--header-title-color2);
+    position : relative;
+    transform : translateY(-100%);
 }
 .footer__nav__title__box{
     display: flex;
@@ -130,11 +138,15 @@ border-bottom: 2px solid #ebebeb;
     color: var(--main--background-color);
     margin: 0;
 }
+.background_image{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .main__first__box{
     background-image: url('../img/1-1.jpeg');
 
 }
-.main__first__title__box{
+.main__first__box{
    display: flex;
    flex-wrap: wrap;
    align-items: center;
@@ -144,7 +156,7 @@ border-bottom: 2px solid #ebebeb;
 }
 .btn_red{
     color: var(--main-color);
-    padding: 1rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
     background-color: var(--main-box-color);
 }
 .main__icon__box{
@@ -153,17 +165,38 @@ border-bottom: 2px solid #ebebeb;
     align-items: baseline;
    
 }
+.main__second__box{
+    background-color: var(--main-color);
+}
 .main__second__count__box{
 display: flex;
+
 }
-.main__box{
-    border-bottom: 2rem;
+main > div{
+    margin-bottom: 2rem;
  }
  
+.main__second__count{
+    color: var(--main--conunt--color);
+}
+.main__second__count__box__line{
+    border-bottom: 1px solid var(--main--conunt--color);
+}
+
+.main__third__box{
+    background-image: url('../img/2-2.png');
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--main-color);
+}
 
 /* 모바일 */
 @media only screen and (max-width: 767px) {
-    .header {
+    #main{
+        padding-bottom: 30rem;
+    }
+.header {
         height: 100px;
         display: flex;
         justify-content: space-between;
@@ -176,6 +209,7 @@ display: flex;
   .footer{
     padding: 2rem;
     font-size: 1.5rem;
+    height: auto;
   }
   .footer__nav__title{
     width: 3rem;
@@ -186,27 +220,53 @@ display: flex;
 }
 .main{
     padding: 2rem 1.5rem 5rem 1.5rem;
-    height: 100vh;
+    
 }
 .main__first__box{
     color: var(--main-color);
-    height: 441px;
-    padding: 1rem;
+    
+    padding: 3rem 2rem;
+    
 }
 
 .main__first__title{
+    margin-top: 3rem;
     font-size: 3rem;
 }
-
+.main__icon__box{
+    margin-top:14rem ;
+}
 .main__icon__box > p{   
     font-size: 1.2rem;
 }
-
-
-.main__second__box{
-    height: 30rem;
+.main__second__title{
+    font-size: 1.7rem;
 }
 
+.main__second__box{
+    padding: 2rem 1rem 2rem 2rem;
+    
+}
+.main__second__count__box{
+    padding: 2rem 9rem 2rem 0;
+    font-size: 1.7rem;
+}
+.main__second__count{
+    padding-right: 2rem;
+}
+
+.main__third__box{
+    padding: 2.5rem 6rem 2.5rem 0rem;
+}
+.main__third__title__box{
+    padding: 2rem ;
+}
+.third__box{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
 
 
 }
