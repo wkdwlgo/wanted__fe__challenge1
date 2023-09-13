@@ -117,6 +117,9 @@ border-bottom: 2px solid #ebebeb;
     color: var(--header-title-color2);
     position : relative;
     transform : translateY(-100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .footer__nav__title__box{
     display: flex;
@@ -152,6 +155,7 @@ border-bottom: 2px solid #ebebeb;
    align-items: center;
    justify-content: center;
    text-align: center;
+   color: var(--main-color);
    
 }
 .btn_red{
@@ -172,9 +176,7 @@ border-bottom: 2px solid #ebebeb;
 display: flex;
 
 }
-main > div{
-    margin-bottom: 2rem;
- }
+
  
 .main__second__count{
     color: var(--main--conunt--color);
@@ -185,16 +187,53 @@ main > div{
 
 .main__third__box{
     background-image: url('../img/2-2.png');
+    
+}
+.images__box{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     color: var(--main-color);
 }
+.main__forth__box{
+background-color: var(--main-box-color);
+color: var(--main-color);
+display: flex;
+flex-wrap: wrap;
+align-items:center;
+}
+.forth__btn{
+    border: 1px solid var(--main-color);
+    padding: 1.5rem 5rem;
+    border-bottom: 2px solid var(--main-color);
+    
+}
+.main__fifth__box{
+    background-image: url('../img/5-5.png');
+}
+
+.main__sixth__box{
+    background-image: url('../img/6-6.png');
+}
+
+.main__seventh__box{
+    background-image: url('../img/7-7.png');
+}
+
+/* 데스크탑 */
+
+
+
+
+
 
 /* 모바일 */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 639px) {
+    .mobile__none{
+        display: none;
+    }
     #main{
-        padding-bottom: 30rem;
+        padding-bottom: 39rem;
     }
 .header {
         height: 100px;
@@ -207,7 +246,7 @@ main > div{
         position: 0;
   }
   .footer{
-    padding: 2rem;
+    padding: 4rem 2rem;
     font-size: 1.5rem;
     height: auto;
   }
@@ -217,6 +256,12 @@ main > div{
 }
 .sns__footer__box> p ~ i{
     padding: 0 1% 0 1%;
+}
+.footer__nav__box > div{
+    margin-bottom: 1rem;
+}
+.footer > div{
+    margin-bottom: 2rem;
 }
 .main{
     padding: 2rem 1.5rem 5rem 1.5rem;
@@ -231,13 +276,18 @@ main > div{
 
 .main__first__title{
     margin-top: 3rem;
-    font-size: 3rem;
+    font-size: 2.3rem;
+    line-height:1.4;
 }
 .main__icon__box{
     margin-top:14rem ;
 }
 .main__icon__box > p{   
     font-size: 1.2rem;
+    padding-right: 1.5rem;
+}
+.main__icon__box>i{
+    padding-right: 1.5rem;
 }
 .main__second__title{
     font-size: 1.7rem;
@@ -259,7 +309,7 @@ main > div{
     padding: 2.5rem 6rem 2.5rem 0rem;
 }
 .main__third__title__box{
-    padding: 2rem ;
+    padding: 2rem 8rem 2rem 2rem;
 }
 .third__box{
     margin-top: 4rem;
@@ -267,12 +317,174 @@ main > div{
     justify-content: baseline;
     align-items: center;
 }
+.third__box>p{
+    padding-right: 1.3rem;
+}
+.third__box>i{
+    padding-right: 1.3rem;
+}
+.main__forth__box{
+    height: 335px;
+    padding: 3rem 2rem 3rem 2rem;
+}
+.main__forth__title{
+    font-size: 2.3rem;
+    line-height:1.4;
+}
+.main__forth_content{
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+.main__margin{
+    margin-bottom: 2rem;
+ }
+}
+
+
+/* 태블릿 */
+@media (min-width: 640px)and (max-width:1024px){
+ 
+    .header{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        font-size: 1.5rem;
+        height: 1.5rem;
+    }
+    #main{
+        padding: 2rem 1rem 30rem 1rem ;
+    }
+    .footer{
+        padding: 4rem 2rem;
+        font-size: 1.5rem;
+        height: auto;
+      }
+
+      .main__first__box{
+        padding: 5rem 18rem 2rem 18rem;
+      }
+      .main__first__title{
+        font-size: 2.5rem;
+        line-height:1.4;
+      }
+      .main__first__content{
+        font-size: 1.5rem;
+        margin-bottom: 9rem;
+      }
+      .main__icon__box > p{
+        font-size: 1.2rem;
+        padding-right: 1rem;
+      }
+      .main__icon__box > i{
+        padding-right: 1rem;
+      }
+      .grid__first {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 1rem;
+    }
+    .main__second__title{
+        padding-left: 2rem;
+        font-size: 1.7rem;
+    }
+    .main__second__box {
+        /* 첫 번째 행, 첫 번째 열 */
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+       
+    }
+    .main__second__count__box{
+        padding: 2rem 3.5rem 2rem 2rem;
+    }
+    .main__second__count{
+        padding-right: 2rem;
+    }
+    .main__second__count__box > p{
+        font-size: 2rem;
+    }
+
+    .main__third__box {
+        /* 첫 번째 행, 두 번째 열 */
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        padding-top: 2rem;
+    }
+    .main__third__title__box{
+        padding: 0rem 17rem 3rem 2rem;
+    }
+    .third__box{
+        display: flex;
+        align-items: center;
+    }
+    .third__box > p{
+        font-size: 1.3rem;
+        padding-right: 1rem;
+    }
+    .third__box > i{
+        padding-right: 1rem;
+    }
+    .image__box__title{
+        font-size: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+    }
+
+    .main__sixth__box {
+        /* 두 번째 행, 두 번째 열 */
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        padding-top: 2rem;
+    }
+    
+    .grid__second{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 1rem;
+    }
+    .main__forth__box {
+        /* 첫 번째 행, 첫 번째 열 */
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+        padding: 3rem 4rem 2rem 2rem;
+    }
+    .main__forth__title{
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+        line-height:1.4;
+    }
+    .main__forth_content{
+        font-size: 1.7rem;
+        padding-bottom: 2rem;
+        line-height:1.3;
+    }
+    .main__fifth__box {
+        /* 첫 번째 행, 두 번째 열 */
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        padding-top: 2rem;
+    }
+
+    .main__seventh__box {
+        /* 두 번째 행, 두 번째 열 */
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        padding-top: 2rem;
+    }
+    
+   main > div{
+    margin-bottom: 1rem;
+   }
+
+
 
 
 }
 
 
-/* 데스크탑 */
-@media only screen and (min-width: 768px) {
 
-}
+
+
+
