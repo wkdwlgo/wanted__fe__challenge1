@@ -40,6 +40,7 @@ body {
   margin: 0;
   color: var(--dark-color);
   overflow-y: scroll;
+  height: auto;
 }
 ul,
 ol {
@@ -135,11 +136,13 @@ border-bottom: 2px solid #ebebeb;
 .input__footer{
     border: none;
     background-color: var(--main--background-color);
+    width: 16rem;
 }
 .button__footer{
     background-color: var(--main-box-color);
     color: var(--main--background-color);
     margin: 0;
+    padding: 0.7rem 1.8rem;
 }
 .background_image{
     background-size: cover;
@@ -359,6 +362,43 @@ align-items:center;
         padding: 4rem 2rem;
         font-size: 1.5rem;
         height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "title nav";
+        gap: 1rem; /* 원하는 간격 설정 */
+    
+      }
+      footer > .title__footer__box,
+      footer > .footer__nav__box {
+          order: 1;
+          padding-bottom: 1rem;
+      }
+
+      footer > .input__footer__box,
+      footer > .sns__footer__box {
+          order: 2;
+          
+      }
+      .title__footer__box {
+        grid-area: title;
+    }
+    
+    .footer__nav__box {
+        grid-area: nav;
+    }
+      footer > div{
+        padding-right: 2rem;
+      }
+      .sns__footer__box{
+        font-size:1.7rem;
+        display: flex;
+        align-items: center;
+      }
+      .sns__footer__box> p{
+        padding-right: 1rem;
+      }
+      .sns__footer__box > i{
+        padding-right: 1rem ;
       }
 
       .main__first__box{
