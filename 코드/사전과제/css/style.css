@@ -96,7 +96,9 @@ fieldset {
     background-color: var(--main--background-color);
     
 }
-
+.Oswald
+{font-family: 'Oswald', sans-serif;
+    letter-spacing:1.3px}
 header{
     /* sticky : 처음엔 static 속성과 같이 동작하다가 스크롤시 지정 지점에서 요소를 fixed 처럼 고정 */
  position: sticky;
@@ -106,9 +108,9 @@ left: 0;
 z-index: 1000; /* 예시로 설정한 값, 필요에 따라 조절하세요 */
 align-items: center;
 border-bottom: 2px solid #ebebeb;
+font-family: 'Lato', sans-serif;
+
 }
-
-
 
 .sns__footer__box{
     display: flex;
@@ -149,7 +151,7 @@ border-bottom: 2px solid #ebebeb;
     background-repeat: no-repeat;
 }
 .main__first__box{
-    background-image: url('../img/1-1.jpeg');
+    background-image: url('../img/card_bg_1.jpg');
 
 }
 .main__first__box{
@@ -189,7 +191,7 @@ display: flex;
 }
 
 .main__third__box{
-    background-image: url('../img/2-2.png');
+    background-image: url('../img/card_bg_2.jpg');
     
 }
 .images__box{
@@ -232,7 +234,15 @@ align-items:center;
 .header__nav__list{
     display: flex;
 }
-
+#main{
+    padding: 2rem 1rem 30rem 1rem ;
+}
+.grid__first {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1rem;
+}
 
 
 
@@ -243,7 +253,7 @@ align-items:center;
         display: none;
     }
     #main{
-        padding-bottom: 39rem;
+        padding-bottom: 48rem;
     }
     .header {
         /* height: 100px; */
@@ -317,7 +327,8 @@ align-items:center;
     padding-right: 1.5rem;
 }
 .main__second__title{
-    font-size: 1.7rem;
+    font-size: 1.55rem;
+    font-weight: 400;
 }
 
 .main__second__box{
@@ -470,7 +481,8 @@ align-items:center;
     }
     .main__second__title{
         padding-left: 2rem;
-        font-size: 1.7rem;
+        font-size: 1.55rem;
+        font-weight: 400;
     }
     .main__second__box {
         /* 첫 번째 행, 첫 번째 열 */
